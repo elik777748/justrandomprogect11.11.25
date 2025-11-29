@@ -1,3 +1,11 @@
+def check_duplicates(a: list):
+    """Перевіряє, чи містить список дублікати"""
+    if len(a) == len(set(a)):
+        return True
+    else:
+        return False
+
+
 def check_password(a: str):
     """Ця функція перевіряє пароль на параметри такі як: Довжина(більше 8 символів), Цифра(наявність хоча б однією цифри), Caps(наявність великої та маленької букви)"""
     d = False
@@ -17,13 +25,10 @@ def check_password(a: str):
         return False
         
 
-while True:
-    if check_password(input("Введіть пароль: ")) == True:
-        print("Password strong")
-        break
-    else: 
-        print("Password bad")
+def check_temperature(temperature: int):
+    """Перевіряє значення. Якщо більше ніж 20, то поверне True інакше False"""
+    if temperature <= 20:
+        return False
+    else:
+        return True
 
-    
-
-    
