@@ -22,7 +22,7 @@ while True:
         print("Password strong")
         break
     else: 
-        print("Pasword bad")
+        print("Password bad")
 
     
 
