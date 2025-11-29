@@ -10,3 +10,4 @@ if check_duplicates(list(input("Введіть свій список(int,str,flo
 else:
     print("Е повтори!")
 
+#s
