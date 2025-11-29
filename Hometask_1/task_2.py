@@ -5,8 +5,8 @@ def check_duplicates(a: list):
     else:
         return False
 
-if check_duplicates(list(input("Введіть свій ліст(int,str,float,bool): ").split(","))):
-    print("Немае повторів")
+if check_duplicates(list(input("Введіть свій список(int,str,float,bool): ").split(","))):
+    print("Немає повторів")
 else:
     print("Е повтори!")
 
