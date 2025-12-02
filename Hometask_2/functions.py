@@ -26,9 +26,9 @@ def avg(values: list[float]) -> float:
             if i > 0:
                 return sum(values) / len(values)
             else:
-                return "ValueError"
+                return ValueError
     else:
-        return "ValueError"
+        return ValueError
     
 def ua_to_usd(amount: float, rate: float) -> float:
     """
@@ -36,7 +36,7 @@ def ua_to_usd(amount: float, rate: float) -> float:
     Якщо сума або курс <= 0 — підіймає ValueError.
     """
     if amount <= 0 or rate <= 0:
-        return "ValueError"
+        return ValueError
     else:
         return amount / rate
 
