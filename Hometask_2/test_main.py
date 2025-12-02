@@ -26,7 +26,7 @@ def test_email_without_domain():
 def test_empty_email():
     assert is_valid_email("") == False
     result = is_valid_email("")
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 def test_email_with_invalid_domain():
@@ -41,21 +41,21 @@ def test_avg_single_value():
     assert avg([5.0]) == pytest.approx(5.0)
 
 def test_avg_empty_list():
-    assert avg([]) == "ValueError"
+    assert avg([]) == ValueError
     result = avg([])
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 def test_avg_with_negative():
-    assert avg([-1.0, 2.0, 3.0]) == "ValueError"
+    assert avg([-1.0, 2.0, 3.0]) == ValueError
     result = avg([-1.0, 2.0, 3.0])
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 def test_avg_zero_in_list():
-    assert avg([0.0, 2.0, 3.0]) == "ValueError"
+    assert avg([0.0, 2.0, 3.0]) == ValueError
     result = avg([0.0, 2.0, 3.0])
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 
@@ -64,17 +64,17 @@ def test_normal_case():
     assert ua_to_usd(5000, 40) == pytest.approx(125.0)
 
 def test_invalid_rate():
-    assert ua_to_usd(1000, 0) == "ValueError"
-    assert ua_to_usd(1000, -25) == "ValueError"
+    assert ua_to_usd(1000, 0) == ValueError
+    assert ua_to_usd(1000, -25) == ValueError
     result = ua_to_usd(1000, 0)
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 def test_invalid_amount():
-    assert ua_to_usd(0, 40) == "ValueError"
-    assert ua_to_usd(-500, 40) == "ValueError"
+    assert ua_to_usd(0, 40) == ValueError
+    assert ua_to_usd(-500, 40) == ValueError
     result = ua_to_usd(0, 40)
-    if result == "ValueError":
+    if result == ValueError:
         pytest.raises(ValueError)
 
 def test_large_values():
