@@ -1,4 +1,4 @@
-def check_duplicates(items: list):
+def has_duplicates(items: list):
     """Перевіряє, чи містить список дублікати"""
     if len(items) == len(set(items)):
         return True
@@ -6,7 +6,7 @@ def check_duplicates(items: list):
         return False
 
 
-def check_password(password: str):
+def is_valid_password(password: str):
     """Ця функція перевіряє пароль на параметри такі як: Довжина(більше 8 символів), Цифра(наявність хоча б однієї цифри), Caps(наявність великої та маленької букви)"""
     has_digit = False
     has_upper = False
@@ -25,7 +25,7 @@ def check_password(password: str):
         return False
 
 
-def check_temperature(temp_celsius: int):
+def is_temperature_above_20(temp_celsius: int):
     """Перевіряє значення. Якщо більше ніж 20, то поверне True інакше False"""
     if temp_celsius <= 20:
         return False
