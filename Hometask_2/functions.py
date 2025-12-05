@@ -21,22 +21,28 @@ def avg(values: list[float]) -> float:
     Повертає середнє значення списку.
     Якщо список порожній — підіймає ValueError.
     """
-    if values or len(values) == 1:
-        for i in values:
-            if i > 0:
-                return sum(values) / len(values)
-            else:
-                return ValueError
-    else:
-        return ValueError
     
+    if not values:
+        raise ValueError("list is empty")
+    
+    if len(values) <= 1:
+        raise ValueError("list has only one value")
+
+    for i in values:
+        if i <= 0:
+            raise ValueError("list has negative values")
+
+    return sum(values) / len(values)
+
+
+
 def ua_to_usd(amount: float, rate: float) -> float:
     """
     Конвертує гривні у долари.
     Якщо сума або курс <= 0 — підіймає ValueError.
     """
     if amount <= 0 or rate <= 0:
-        return ValueError
+        raise ValueError("float has negative values")
     else:
         return amount / rate
 
