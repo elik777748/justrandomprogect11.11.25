@@ -28,10 +28,6 @@ def avg(values: list[float]) -> float:
     if len(values) <= 1:
         raise ValueError("list has only one value")
 
-    for i in values:
-        if i <= 0:
-            raise ValueError("list has negative values")
-
     return sum(values) / len(values)
 
 

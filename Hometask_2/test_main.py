@@ -31,28 +31,24 @@ def test_invalid_domain():
 
 
 
+
 # avg
 
 def test_avg_normal_list():
     assert avg([1.0, 2.0, 3.0]) == pytest.approx(2.0)
+    assert avg([5.0, 10.0, 15.0]) == pytest.approx(10.0)
 
 def test_avg_single_value_raises():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match="list has only one value"):
         avg([5.0])
 
-def test_avg_empty_list():
-    with pytest.raises(ValueError):
+def test_avg_empty_list_raises():
+    with pytest.raises(ValueError, match="list is empty"):
         avg([])
 
-def test_avg_with_negative():
-    with pytest.raises(ValueError):
-        avg([-1.0, 2.0, 3.0])
-
-def test_avg_zero_in_list():
-    with pytest.raises(ValueError):
-        avg([0.0, 2.0, 3.0])
-
-
+def test_avg_with_negative_values_allowed():
+    assert avg([-1.0, 2.0, 3.0]) == pytest.approx(4/3)
+    assert avg([-5.0, -10.0, -15.0]) == pytest.approx(-10.0)
 
 # ua_to_usd
 
