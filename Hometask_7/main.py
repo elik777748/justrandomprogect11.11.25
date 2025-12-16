@@ -8,8 +8,10 @@ def timer(func):
         func()
         b = datetime.datetime.now()
         print(f"Function: {func.__name__} took {b - a} seconds")
-    return a()
+    return a
 
 @timer
 def delay():
     time.sleep(5)
+
+delay()
