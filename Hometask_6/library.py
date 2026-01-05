@@ -38,20 +38,20 @@ class Library:
         print("\n")
 
 
-my_library = Library("e7")
+# my_library = Library("e7")
 
-my_library.add_book(Book("Іван Франко", "Захар Беркут", "001"))
-my_library.add_book(Book("Леся Українка", "Лісова пісня", "002"))
-my_library.add_book(Book("Тарас Шевченко", "Кобзар", "003"))
+# my_library.add_book(Book("Іван Франко", "Захар Беркут", "001"))
+# my_library.add_book(Book("Леся Українка", "Лісова пісня", "002"))
+# my_library.add_book(Book("Тарас Шевченко", "Кобзар", "003"))
 
-my_library.display_books()
+# my_library.display_books()
 
-my_library.remove_book("002")
+# my_library.remove_book("002")
 
-my_library.display_books()
+# my_library.display_books()
 
-my_library.remove_book("999")
+# my_library.remove_book("999")
 
-my_library.add_book(Book("Стівен Кінг", "Воно", "004"))
+# my_library.add_book(Book("Стівен Кінг", "Воно", "004"))
 
-my_library.display_books()
+# my_library.display_books()
