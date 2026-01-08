@@ -13,10 +13,11 @@
 # with open("uv/s3/202025-12-12%20211107.jpg", "rb") as file:
 #     print(file.read())
 
-
 import boto3
+import pprint
 
 BUCKET_NAME = "group11112025"
+PUBLIC_URL='https://pub-f8a0a61d58744db88283773e03043bb4.r2.dev'
 
 s3 = boto3.client(
     service_name="s3",
@@ -28,3 +29,9 @@ s3 = boto3.client(
 
 target_filename = "images/Yelisey.jpg"
 s3.upload_file("uv/s3/Yelisey.jpg", BUCKET_NAME, target_filename)
+maube_url = f"{PUBLIC_URL}/{target_filename}"
+print(maube_url)
+# response = s3.list_objects_v2(Bucket=BUCKET_NAME)
+# pprint.pprint(response)
+
+# s3.download_file(BUCKET_NAME, target_filename, "uv/s3/download.jpg")
